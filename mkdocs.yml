@@ -1,0 +1,92 @@
+site_name: HerramientaJB · Documentación
+site_description: Sistema de inventario, taller y facturación para el taller electromecánico HerramientaJB
+site_url: https://yenysilvacamargo1020-lgtm.github.io/HerramientaJB/
+repo_url: https://github.com/yenysilvacamargo1020-lgtm/HerramientaJB
+repo_name: yenysilvacamargo1020-lgtm/HerramientaJB
+edit_uri: edit/main/docs/
+copyright: Proyecto académico SENA · Tecnólogo en Análisis y Desarrollo de Software
+
+theme:
+  name: material
+  language: es
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: amber
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: amber
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - content.code.copy
+    - content.action.edit
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Inicio: index.md
+  - Primeros pasos:
+      - Instalación: primeros-pasos/instalacion.md
+      - Usuarios de prueba: primeros-pasos/usuarios-prueba.md
+  - Arquitectura:
+      - arquitectura/index.md
+      - 1. Introducción y objetivos: arquitectura/01-introduccion.md
+      - 2. Restricciones: arquitectura/02-restricciones.md
+      - 3. Contexto y alcance: arquitectura/03-contexto.md
+      - 4. Estrategia de solución: arquitectura/04-estrategia.md
+      - 5. Vista de bloques: arquitectura/05-vista-de-bloques.md
+      - 6. Vista de ejecución: arquitectura/06-vista-de-ejecucion.md
+      - 7. Despliegue: arquitectura/07-despliegue.md
+      - 8. Conceptos transversales: arquitectura/08-conceptos.md
+      - 9. Decisiones: arquitectura/09-decisiones.md
+      - 10. Calidad y pruebas: arquitectura/10-calidad.md
+      - 11. Riesgos y deuda técnica: arquitectura/11-riesgos.md
+      - 12. Glosario: arquitectura/12-glosario.md
+  - Decisiones (ADR):
+      - decisiones/index.md
+      - ADR-0001 Arquitectura en capas: decisiones/0001-arquitectura-en-capas.md
+      - ADR-0002 Dos roles con middleware: decisiones/0002-dos-roles.md
+      - ADR-0003 Borrado lógico: decisiones/0003-borrado-logico.md
+      - ADR-0004 Stock solo por movimientos: decisiones/0004-stock-por-movimientos.md
+      - ADR-0005 Precios calculados en el servidor: decisiones/0005-precios-en-servidor.md
+      - ADR-0006 Interfaz web y API separadas: decisiones/0006-web-y-api-separadas.md
+      - Plantilla para un ADR nuevo: decisiones/plantilla.md
+  - ¿Dónde hago el cambio?:
+      - guias/index.md
+      - Agregar un campo: guias/agregar-campo.md
+      - Crear un recurso nuevo: guias/nuevo-recurso.md
+      - Agregar una operación a la API: guias/nueva-operacion.md
+      - Crear una pantalla: guias/nueva-pantalla.md
+      - Cambiar permisos o roles: guias/permisos.md
+      - Cambiar una regla de negocio: guias/regla-de-negocio.md
+  - Base de datos: datos.md
+  - API REST: api.md
+  - Cómo contribuir: contribuir.md
